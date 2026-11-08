@@ -1,0 +1,24 @@
+﻿<Page x:Class="Practica8.Pages.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Practica8.Pages"
+      mc:Ignorable="d" 
+      Background="Cornsilk"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock 
+            Text="Автосалончик"
+            FontSize="50"
+            Foreground="Coral"/>
+
+        <Button x:Name ="RegisterCarButton" 
+                Margin="33,120,33,-125"
+                Content="Оформить машинку:)"
+                FontSize="20"
+                Click="RegisterCarButton_OnClick"/>
+    </Grid>
+</Page>
