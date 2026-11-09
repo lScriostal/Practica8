@@ -9,7 +9,37 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page2">
 
-    <Grid>
-        
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Выбор модели и типа двигателя"
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   Foreground="Coral"/>
+        <TextBlock Text="Выбор модели машины"
+                   FontSize="20" 
+                   Margin="54,67,-54,-67"
+                   Foreground="Coral"/>
+        <ListBox x:Name="ListBox1" 
+                 Margin="54,100,54,241"/>
+        <TextBlock Text="Выбор типа двигателя"
+                   FontSize="20" 
+                   Margin="54,225,-54,-225"
+                   Foreground="Coral"/>
+        <ListBox x:Name="ListBox2" 
+                 Margin="54,261,54,80"/>
+        <Button x:Name="EngineButton"
+                Margin="306,387,306,10"
+                Content="Продолжить"
+                FontSize="20"
+                Click="EngineButton_OnClick"
+                />
     </Grid>
 </Page>
