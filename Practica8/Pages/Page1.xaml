@@ -9,23 +9,25 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page1">
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid Margin="20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         <TextBlock 
+            Grid.Row="0"
+            Margin="0,0,0,30"
+            HorizontalAlignment="Center"
             Text="Автосалончик"
             FontSize="50"
             Foreground="Coral"/>
 
         <Button x:Name ="RegisterCarButton" 
-                Margin="33,120,33,-125"
+                Grid.Row="1"
+                Width="300" 
+                Height="50"
                 Content="Оформить машинку:)"
                 FontSize="20"
                 Click="RegisterCarButton_OnClick"/>

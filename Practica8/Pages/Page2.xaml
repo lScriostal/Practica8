@@ -9,37 +9,46 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page2">
 
-    <Grid Margin="10">
+    <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Выбор модели и типа двигателя"
-                   FontSize="30"
+        <TextBlock Grid.Row="0" 
+                   Text="Выбор модели и типа двигателя"
+                   FontSize="26"
+                   Foreground="Coral"
                    HorizontalAlignment="Center"
-                   Foreground="Coral"/>
-        <TextBlock Text="Выбор модели машины"
-                   FontSize="20" 
-                   Margin="54,67,-54,-67"
-                   Foreground="Coral"/>
-        <ListBox x:Name="ListBox1" 
-                 Margin="54,100,54,241"/>
-        <TextBlock Text="Выбор типа двигателя"
-                   FontSize="20" 
-                   Margin="54,225,-54,-225"
-                   Foreground="Coral"/>
-        <ListBox x:Name="ListBox2" 
-                 Margin="54,261,54,80"/>
+                   Margin="0,0,0,40"/>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,30">
+            <TextBlock Text="Выбор модели машины"
+                       FontSize="18"
+                       Foreground="Coral"
+                       Margin="0,0,0,10"/>
+            <ListBox x:Name="ListBox1"
+                     Height="100"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,0,0,30">
+            <TextBlock Text="Выбор модели машины"
+                       FontSize="18"
+                       Foreground="Coral"
+                       Margin="0,0,0,10"/>  
+            <ListBox x:Name="ListBox2"
+                     Height="100"/>
+        </StackPanel>
+
         <Button x:Name="EngineButton"
-                Margin="306,387,306,10"
+                Grid.Row="3"
                 Content="Продолжить"
-                FontSize="20"
-                Click="EngineButton_OnClick"
-                />
+                Width="135"
+                Height="35"
+                HorizontalAlignment="Center"
+                Click="EngineButton_OnClick"/>
+
     </Grid>
 </Page>

@@ -9,7 +9,63 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page4">
 
-    <Grid>
-        
-    </Grid>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" 
+                   Text="Расчёт итоговой стоимости"
+                   FontSize="26"
+                   Foreground="Coral"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,30"/>
+
+        <Border Grid.Row="1" Background="White" BorderBrush="Gray"
+                BorderThickness="1" Padding="20" VerticalAlignment="Top">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Модель:" FontSize="18" Margin="0,5"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="TxtModelName" FontSize="18" Margin="10,5"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" x:Name="TxtModelPrice" FontSize="18" Margin="0,5" HorizontalAlignment="Right"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Двигатель:" FontSize="18" Margin="0,5"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" x:Name="TxtEngineName" FontSize="18" Margin="10,5"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" x:Name="TxtEnginePrice" FontSize="18" Margin="0,5" HorizontalAlignment="Right"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Цвет:" FontSize="18" Margin="0,5"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" x:Name="TxtColorName" FontSize="18" Margin="10,5"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" x:Name="TxtColorPrice" FontSize="18" Margin="0,5" HorizontalAlignment="Right"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Доп.опции:" FontSize="18" Margin="0,5" VerticalAlignment="Top"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" x:Name="TxtOptionsName" FontSize="18" Margin="10,5" TextWrapping="Wrap" MaxWidth="300"/>
+                <TextBlock Grid.Row="3" Grid.Column="2" x:Name="TxtOptionsPrice" FontSize="18" Margin="0,5" HorizontalAlignment="Right"/>
+
+                <Separator Grid.Row="4" Grid.ColumnSpan="3" Margin="0,15"/>
+
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Итого:" FontSize="22" Margin="0,5"/>
+                <TextBlock Grid.Row="5" Grid.Column="2" x:Name="TxtTotalPrice" FontSize="24" Margin="0,5" HorizontalAlignment="Right"/>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="2" Margin="0,20,0,0">
+            <Button x:Name="BackButton" Content="Назад" Width="135" Height="35" HorizontalAlignment="Left" Click="BackButton_OnClick"/>
+            <Button x:Name="NextButton" Content="Оформить кредит" Width="135" Height="35" HorizontalAlignment="Right" Click="NextButton_OnClick"/>
+        </Grid>
+        </Grid>
 </Page>

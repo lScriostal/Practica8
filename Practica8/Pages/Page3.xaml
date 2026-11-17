@@ -9,40 +9,57 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page3">
 
-    <Grid Margin="10">
+    <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Выбор цвета и дополнительных опций"
-            Grid.Row="0"
-            FontSize="30"
-            HorizontalAlignment="Center"
-            Foreground="Coral"/>
-        <TextBlock Text="Выбор цвета машины"
-            FontSize="20" 
-            Margin="54,67,-54,-67"
-            Foreground="Coral"/>
-        <ListBox x:Name="ListBox1" 
-          Margin="54,100,54,241"/>
-        <TextBlock Text="Выбор дополнительных опций"
-            FontSize="20" 
-            Margin="54,225,-54,-225"
-            Foreground="Coral"/>
-        <ListBox x:Name="ListBox2" 
-          Margin="54,261,54,80"/>
-        <Button x:Name="ColorButton"
-             Margin="558,387,54,10"
-             Content="Продолжить"
-             FontSize="20"
-             Click="ColorButton_OnClick"/>
-        <Button x:Name="ColorEndButton"
-             Margin="54,387,558,10"
-             Content="Назад"
-             FontSize="20"
-             Click="ColorEndButton_OnClick"/>
+        <TextBlock Grid.Row="0" 
+                   Text="Выбор цвета и дополнительных опций"
+                   FontSize="26"
+                   Foreground="Coral"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,40"/>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,30">
+            <TextBlock Text="Выбор цвета машины"
+                       FontSize="18"
+                       Foreground="Coral"
+                       Margin="0,0,0,10"/>
+            <ListBox x:Name="ListBox1"
+                     Height="100"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,0,0,30">
+            <TextBlock Text="Выбор дополнительных опций"
+                       FontSize="18"
+                       Foreground="Coral"
+                       Margin="0,0,0,10"/>
+            <CheckBox x:Name="ChkBasic" Content="Обычная версия" Margin="0,5"/>
+            <CheckBox x:Name="ChkMedium" Content="Средняя версия" Tag="20000" Margin="0,5"/>
+            <CheckBox x:Name="ChkMax" Content="Максимальная версия" Tag="50000" Margin="0,5"/>
+            <CheckBox x:Name="ChkRoof" Content="Панорамная крыша" Tag="30000" Margin="0,5"/>
+            <CheckBox x:Name="ChkAutoPilot" Content="Автопилот" Tag="70000" Margin="0,5"/>
+        </StackPanel>
+
+        <Grid Grid.Row="3">
+            <Button x:Name="ColorButton"
+                Content="Продолжить"
+                Width="135"
+                Height="35"
+                HorizontalAlignment="Right"
+                Click="ColorButton_OnClick"/>
+
+            <Button x:Name="ColorEndButton"
+                Content="Назад"
+                Width="135"
+                Height="35"
+                HorizontalAlignment="Left"
+                Click="ColorEndButton_OnClick"/>
+        </Grid>
+
     </Grid>
 </Page>

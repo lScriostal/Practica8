@@ -8,6 +8,23 @@
         Background="Cornsilk"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-<Frame x:Name="MainFrame" Grid.Row="1" Source="Pages/Page1.xaml" NavigationUIVisibility="Hidden"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#FFF9E6" Padding="20,15" BorderBrush="Gray" BorderThickness="0,0,0,1">
+            <ProgressBar x:Name="StepProgressBar" 
+                         Width="400" 
+                         Height="15" 
+                         Minimum="1" 
+                         Maximum="5" 
+                         Value="1" 
+                         Foreground="Coral" 
+                         Background="#FFE0B2" 
+                         BorderThickness="0"/>
+        </Border>
+
+        <Frame Grid.Row="1" x:Name="MainFrame" Source="Pages/Page1.xaml" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
